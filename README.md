@@ -1,15 +1,15 @@
 # 0x1D. C - Binary trees
 A binary tree is a type of data structure where each parent can have at most 2 children. It consists of nodes where each node contains a data item and the address of its left and right children.
 
-[Description](#description)
-[General Information](#general-information)
-[Compilation](#compilation)
-[Coding style](#coding-style)
-[Usage](#usage)
-[Files](#files)
-[More Info](#more-info)
-[Tasks](#tasks)
-[Author](#author)
+- [Description](#description)
+- [General Information](#general-information)
+- [Compilation](#compilation)
+- [Coding style](#coding-style)
+- [Usage](#usage)
+- [Files](#files)
+- [More Info](#more-info)
+- [Tasks](#tasks)
+- [Author](#author)
 
 
 ## Description
