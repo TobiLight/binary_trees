@@ -172,6 +172,13 @@ typedef struct binary_tree_s heap_t;
     - Where `tree` is a pointer to the root node of the tree to measure the size
     - If `tree` is `NULL`, the function must return `0`
 
+* **[12-binary_tree_leaves.c](./12-binary_tree_leaves.c)** - Write a function that counts the leaves in a binary tree
+
+    - Prototype: `size_t binary_tree_leaves(const binary_tree_t *tree);`
+    - Where `tree` is a pointer to the root node of the tree to count the number of leaves
+    - If `tree` is `NULL`, the function must return 0
+    - A `NULL` pointer is not a leaf
+
 
 
 
