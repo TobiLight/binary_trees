@@ -157,5 +157,10 @@ typedef struct binary_tree_s heap_t;
     - And `func` is a pointer to a function to call for each node. The value in the node must be passed as a parameter to this function.
     - If `tree` or `func` is `NULL`, do nothing
 
+* **[9-binary_tree_height.c](./9-binary_tree_height.c)** - Write a function that measures the height of a binary tree
+    - Prototype: `size_t binary_tree_height(const binary_tree_t *tree);`
+    - Where `tree` is a pointer to the root node of the tree to measure the height.
+    - If `tree` is `NULL`, your function must return `0`
+
 ## Author
 This project is authored by **Oluwatobiloba Light**. Feel free to reach out with any questions or suggestions. :)
