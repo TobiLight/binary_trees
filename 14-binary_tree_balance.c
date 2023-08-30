@@ -14,7 +14,8 @@
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int balance_count = 0, left_node_count = 0, right_node_count = 0;
+	int balance_count = 0, left_node_count = 0,
+		right_node_count = 0;
 
 	if (tree == NULL)
 		return (0);
@@ -24,7 +25,9 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (tree->right != NULL)
 		right_node_count = binary_tree_balance(tree->right) + 1;
-
-	balance_count = left_node_count - right_node_count;
+	if (left_node_count - right_node_count < 1)
+		balance_count = left_node_count - right_node_count;
+	else
+		balance_count = left_node_count - right_node_count;
 	return (balance_count);
 }
