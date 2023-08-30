@@ -21,6 +21,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (tree->left != NULL)
 		left_node_count = binary_tree_balance(tree->left) + 1;
+
 	if (tree->right != NULL)
 		right_node_count = binary_tree_balance(tree->right) + 1;
 
