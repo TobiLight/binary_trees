@@ -191,7 +191,10 @@ typedef struct binary_tree_s heap_t;
     - If `tree` is `NULL`, return `0`
 
 
-
+* **[15-binary_tree_is_full.c](./15-binary_tree_is_full.c)** - Write a function that checks if a binary tree is full
+    - Prototype: `int binary_tree_is_full(const binary_tree_t *tree);`
+    - Where `tree` is a pointer to the root node of the tree to check
+    - If `tree` is `NULL`, your function must return `0`
 
 ## Author
 This project is authored by **Oluwatobiloba Light**. Feel free to reach out with any questions or suggestions. :)
