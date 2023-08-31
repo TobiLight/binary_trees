@@ -209,5 +209,12 @@ typedef struct binary_tree_s heap_t;
     - If `node` is `NULL` or the parent is `NULL`, return `NULL`
     - If `node` has no sibling, return `NULL`
 
+* **[18-binary_tree_uncle.c](./18-binary_tree_uncle.c)** - Write a function that finds the uncle of a node
+    - Prototype: `binary_tree_t *binary_tree_uncle(binary_tree_t *node);`
+    - Where `node` is a pointer to the node to find the uncle
+    - Your function must return a pointer to the uncle node
+    - If `node` is `NULL`, return `NULL`
+    - If `node` has no uncle, return `NULL`
+
 ## Author
 This project is authored by **Oluwatobiloba Light**. Feel free to reach out with any questions or suggestions. :)
