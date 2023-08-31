@@ -11,6 +11,8 @@ int binary_tree_is_bst_helper(const binary_tree_t *tree, int min, int max);
  * binary_tree_is_bst_helper - Helper function to check if a binary tree is a
  *                             valid Binary Search Tree.
  * @tree: Pointer to the root node of the tree to check
+ * @min: Lower bound of checked node
+ * @max: Upper bound of checked node
  *
  * Return: 1 if tree is a valid BST, otherwise 0.
  */
@@ -21,6 +23,7 @@ int binary_tree_is_bst_helper(const binary_tree_t *tree, int min, int max)
 
 	if (tree->n <= min || tree->n >= max)
 		return (0);
+
 	return (binary_tree_is_bst_helper(tree->left, min, tree->n - 1) &&
 			binary_tree_is_bst_helper(tree->right, tree->n + 1, max));
 }
