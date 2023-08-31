@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "**/templates/*.html": "html",
+    "**/templates/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+    "*.html": "html",
+    "*.py": "python",
+    "*.c": "c",
+    "binary_trees.h": "c"
+  }
+}
