@@ -31,7 +31,9 @@ size_t heap_tree_size(const binary_tree_t *tree)
 }
 
 /**
- *
+ * heap_to_sorted_array - M
+ * @heap: h
+ * @size: s
  */
 
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
