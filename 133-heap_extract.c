@@ -97,10 +97,10 @@ void heap_tree(heap_t *root)
 			temp2 = temp1->left;
 		else
 		{
-			if (temp1->right->n < temp1->left->n)
-				temp2 = temp1->right;
-			else
+			if (temp1->left->n > temp1->right->n)
 				temp2 = temp1->left;
+			else
+				temp2 = temp1->right;
 		}
 		if (temp1->n > temp2->n)
 			break;
