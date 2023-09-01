@@ -13,7 +13,8 @@
  *
  * Return: Pointer to the created node, or NULL on failure
  */
-avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node, avl_t *parent)
+avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node,
+						 avl_t *parent)
 {
 	int bf;
 
@@ -21,9 +22,11 @@ avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node, avl_t *paren
 		return (*new_node = binary_tree_node(parent, value));
 
 	if (value < (*tree)->n)
-		(*tree)->left = avl_insert_helper(&((*tree)->left), value, new_node, parent);
+		(*tree)->left = avl_insert_helper(&((*tree)->left), value, new_node,
+										  parent);
 	else if (value > (*tree)->n)
-		(*tree)->right = avl_insert_helper(&((*tree)->right), value, new_node, parent);
+		(*tree)->right = avl_insert_helper(&((*tree)->right), value, new_node,
+										   parent);
 	else
 		return (NULL);
 	bf = binary_tree_balance(*tree);
