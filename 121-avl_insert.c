@@ -26,27 +26,35 @@ avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node,
 		return (*new_node = binary_tree_node(parent, value));
 
 	if (value < (*tree)->n)
+	{
 		(*tree)->left = avl_insert_helper(&((*tree)->left), value, new_node,
 										  *tree);
+		if ((*tree)->left == NULL)
+			return (NULL);
+	}
 	else if (value > (*tree)->n)
+	{
 		(*tree)->right = avl_insert_helper(&((*tree)->right), value,
 										   new_node, *tree);
+		if ((*tree)->right == NULL)
+			return (NULL);
+	}
 	else
 		return (NULL);
 	bf = binary_tree_balance(*tree);
 	if (bf > 1 && value < (*tree)->left->n)
-		return (binary_tree_rotate_right(*tree));
+		*tree = binary_tree_rotate_right(*tree);
 	if (bf < -1 && value > (*tree)->right->n)
-		return (binary_tree_rotate_left(*tree));
+		*tree = binary_tree_rotate_left(*tree);
 	if (bf > 1 && value > (*tree)->left->n)
 	{
 		(*tree)->left = binary_tree_rotate_left((*tree)->left);
-		return (binary_tree_rotate_right(*tree));
+		*tree = binary_tree_rotate_right(*tree);
 	}
 	if (bf < -1 && value < (*tree)->right->n)
 	{
 		(*tree)->right = binary_tree_rotate_right((*tree)->right);
-		return (binary_tree_rotate_left(*tree));
+		*tree = binary_tree_rotate_left(*tree);
 	}
 	return (*tree);
 }
