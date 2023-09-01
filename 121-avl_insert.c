@@ -27,7 +27,7 @@ avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node,
 
 	if (value < (*tree)->n)
 	{
-		(*tree)->left = avl_insert_helper(&((*tree)->left), value, new_node,
+		(*tree)->left = avl_insert_helper(&(*tree)->left, value, new_node,
 										  *tree);
 		if ((*tree)->left == NULL)
 			return (NULL);
