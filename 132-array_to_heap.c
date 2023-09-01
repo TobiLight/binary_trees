@@ -18,8 +18,11 @@ heap_t *array_to_heap(int *array, size_t size)
 	unsigned int i;
 	heap_t *root = NULL;
 
-	for (i = 0; i < size; i++)
+	i = 0;
+	while (i < size;)
+	{
 		heap_insert(&root, array[i]);
-
+		i++;
+	}
 	return (root);
 }
