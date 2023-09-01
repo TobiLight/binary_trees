@@ -48,7 +48,7 @@ int bst_replace_with_successor(bst_t *root)
 
 int bst_remove_node(bst_t *node)
 {
-	if (!node->left && !node->right)
+	if (node->left == NULL && node->right == NULL)
 	{
 		if (node->parent->right == node)
 			node->parent->right = NULL;
@@ -57,9 +57,9 @@ int bst_remove_node(bst_t *node)
 		free(node);
 		return (0);
 	}
-	else if ((!node->left && node->right) || (!node->right && node->left))
+	else if ((node->left == NULL && node->right) || (node->right == NULL && node->left))
 	{
-		if (!node->left)
+		if (node->left == NULL)
 		{
 			if (node->parent->right == node)
 				node->parent->right = node->right;
@@ -67,7 +67,7 @@ int bst_remove_node(bst_t *node)
 				node->parent->left = node->right;
 			node->right->parent = node->parent;
 		}
-		if (!node->right)
+		if (node->right == NULL)
 		{
 			if (node->parent->right == node)
 				node->parent->right = node->left;
