@@ -44,14 +44,14 @@ avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node,
 	bf = binary_tree_balance(*tree);
 	if (bf > 1 && value < (*tree)->left->n)
 		*tree = binary_tree_rotate_right(*tree);
-	if (bf > 1 && value > (*tree)->left->n)
+	else if (bf > 1 && value > (*tree)->left->n)
 	{
 		(*tree)->left = binary_tree_rotate_left((*tree)->left);
 		*tree = binary_tree_rotate_right(*tree);
 	}
-	if (bf < -1 && value > (*tree)->right->n)
+	else if (bf < -1 && value > (*tree)->right->n)
 		*tree = binary_tree_rotate_left(*tree);
-	if (bf < -1 && value < (*tree)->right->n)
+	else if (bf < -1 && value < (*tree)->right->n)
 	{
 		(*tree)->right = binary_tree_rotate_right((*tree)->right);
 		*tree = binary_tree_rotate_left(*tree);
