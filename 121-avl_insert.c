@@ -23,10 +23,10 @@ avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node,
 
 	if (value < (*tree)->n)
 		(*tree)->left = avl_insert_helper(&((*tree)->left), value, new_node,
-										  parent);
+										  *tree);
 	else if (value > (*tree)->n)
 		(*tree)->right = avl_insert_helper(&((*tree)->right), value, new_node,
-										   parent);
+										   *tree);
 	else
 		return (NULL);
 	bf = binary_tree_balance(*tree);
