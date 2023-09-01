@@ -40,7 +40,7 @@ avl_t *avl_insert_helper(avl_t **tree, int value, avl_t **new_node,
 			return (NULL);
 	}
 	else
-		return (NULL);
+		return (*tree);
 	bf = binary_tree_balance(*tree);
 	if (bf > 1 && value < (*tree)->left->n)
 		*tree = binary_tree_rotate_right(*tree);
