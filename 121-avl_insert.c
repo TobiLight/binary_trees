@@ -64,6 +64,8 @@ avl_t *avl_insert(avl_t **tree, int value)
 		*tree = binary_tree_node(NULL, value);
 		return (*tree);
 	}
+
 	avl_insert_helper(tree, value, &new_node, *tree);
+
 	return (new_node);
 }
