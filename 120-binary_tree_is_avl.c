@@ -40,7 +40,7 @@ int is_avl_helper(const binary_tree_t *tree, int min, int max)
 {
 	int path_l, path_r;
 
-	if (!tree)
+	if (tree == NULL)
 		return (1);
 	if (tree->n < min || tree->n > max)
 		return (0);
