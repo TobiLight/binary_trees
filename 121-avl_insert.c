@@ -10,6 +10,10 @@
  * @tree: Double pointer to the root node of the AVL tree for inserting the
  *        value
  * @value: Value to store in the node to be inserted
+ * @new_node: Double pointer to the root node of the AVL tree for inserting
+ *            the value
+ * @parent: Parent node of AVL.
+ * @value: Value to be inserted in AVL Tree.
  *
  * Return: Pointer to the created node, or NULL on failure
  */
