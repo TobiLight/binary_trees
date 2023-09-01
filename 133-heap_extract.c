@@ -117,7 +117,6 @@ void heap_tree(heap_t *root)
  *
  * Return: The value stored in the root node
  */
-
 int heap_extract(heap_t **root)
 {
 	int value;
