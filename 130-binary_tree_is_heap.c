@@ -78,8 +78,6 @@ int binary_tree_is_complete(const binary_tree_t *tree)
  * tree_is_heap_helper - Helper function to check if a binary tree is a valid
  *                       Max Binary Heap
  * @tree: Pointer to the root node of the tree to check
- * @size: Number of nodes
- * @idx: Index of the node.
  *
  * Return: 1 if tree is a valid Max Binary Heap or if tree is NULL otherwise
  *         0
