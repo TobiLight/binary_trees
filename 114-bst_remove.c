@@ -57,7 +57,8 @@ int bst_remove_node(bst_t *node)
 		free(node);
 		return (0);
 	}
-	else if ((node->left == NULL && node->right) || (node->right == NULL && node->left))
+	else if ((node->left == NULL && node->right) ||
+			 (node->right == NULL && node->left))
 	{
 		if (node->left == NULL)
 		{
